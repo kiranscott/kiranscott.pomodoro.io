@@ -1,0 +1,15 @@
+{
+  "type": "module",
+
+  "module": "commonjs",
+
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "esm": "*"
+  },
+  "devDependencies": {
+    "fast-check": "^2.16.0",
+    "mocha": "^8.3.2"
+  }
+}

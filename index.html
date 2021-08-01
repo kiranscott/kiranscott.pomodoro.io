@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-gb">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <link 
+        rel="stylesheet" 
+        href="https://fonts.googleapis.com/css?family=Quicksand"
+    />
+    <link 
+    rel="stylesheet" 
+    href="https://fonts.googleapis.com/css?family=Pacifico"
+    />
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+    />
+    <link rel="stylesheet" href="default.css">
+    <link rel="shortcut icon" href="favicon.png">
+    <script type="module" src ="main.js"></script>
+    <title>Pomodoro timer</title>
+</head>
+
+<body>
+  <progress id="progress" value="0"></progress>
+    <div class="progress-bar"></div>
+      <div class="timer">
+        <div class="button-group mode-buttons" id="mode-buttons">
+          <span id="counter">0</span>
+          <button
+            data-mode="workSesh"
+            class="button active mode-button"
+            id="work-sesh"          
+          >
+            Study session
+          </button>
+          <button
+            data-mode="shortBreak"
+            class="button mode-button"
+            id="short-break"
+          >
+            Short break
+          </button>
+          <button
+            data-mode="longBreak"
+            class="button mode-button"
+            id="long-break"
+          >
+            Long break
+          </button>
+        </div>
+        <div class="clock" id="clock">
+
+          <span id="minutes">25</span>
+          <span class="separator">:</span>
+          <span id="seconds">00</span>
+        </div>
+        <button class="main-button" data-action="start" id="btn">
+          Start
+        </button>
+      </div>
+  <div class = "todo-section">
+    <form> 
+        <input type = "text" class="todos-input" placeholder="Write a task...">
+        <button type = "submit" class = "todos-button">
+            <i class="fas fa-plus-square"></i>
+        </button>
+        <div class ="save">
+            <button type = "submit" class = "save-button">
+                <i class="fas fa-save"></i>
+            </button>
+        </div>
+    </form>
+
+    <div class="todos-container">
+        <ul class="todos-list">
+        </ul>
+    </div>
+  </div>
+
+  <div id="description">
+    <header>
+        <h3>
+            What is the pomodoro technique?
+        </h3>
+    </header>
+    <p>
+        <br>The Pomodoro Technique was developed by the university student Francesco Cirillo. struggling to focus on his studies,
+        <br> he asked himself to commit to just 25 minutes of focused study time. Encouraged by the challenge,
+        <br> he found a tomato shaped kitchen timer and the Pomodoro technique was born!</br>
+
+        <br>Though Cirillo went on to write a 
+            <a href="https://francescocirillo.com/products/the-pomodoro-technique">130-page</a> book about the method, its biggest strength
+            is its simplicity:</br>
+        <ol>
+            <li>Add tasks to work on today</li>
+            <li>Select a task to work on</li>
+            <li>Start timer and focus for 25 minutes</li>
+            <li>Timer switches to a short break for 5 minutes</li>
+            <li>The cycle Iterates 4 times before a longer break of 20 minutes</li>
+        </ol>
+    </p>
+  </div>
+    
+  <div class="hidden">
+    <audio src="get_back_to_work.mp3" data-sound="workSesh"></audio>
+    <audio src="japanese_school_bell.mp3" data-sound="shortBreak"></audio>
+    <audio src="japanese_school_bell.mp3" data-sound="longBreak"></audio>
+  </div>     
+</body>
+</html>
